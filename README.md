@@ -13,3 +13,6 @@ Repo ini merupakan tugas dari mata kuliah Computer Network Management di semeste
 - as-number yang sama neighborship dengan menggunakan IP Loopback, sedangkan as-number yang berbeda neighborship dengan menggunakan IP Physical
 - Router 1 dapat menyebarkan informasi network 10.10.10.10 ke seluruh router
 - Router 7 dapat menyebarkan informasi network 70.70.70.70 ke seluruh router
+
+
+![Topologi](https://user-images.githubusercontent.com/71112016/178019460-32a677ee-0dee-45bd-8395-551006e88f1b.png)
