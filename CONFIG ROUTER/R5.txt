@@ -1,0 +1,67 @@
+<R5>disp curr
+[V200R003C00]
+#
+ sysname R5
+#
+ snmp-agent local-engineid 800007DB03000000000000
+ snmp-agent 
+#
+ clock timezone China-Standard-Time minus 08:00:00
+#
+portal local-server load portalpage.zip
+#
+ drop illegal-mac alarm
+#
+ set cpu-usage threshold 80 restore 75
+#
+aaa 
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default 
+ domain default_admin 
+ local-user admin password cipher %$%$K8m.Nt84DZ}e#<0`8bmE3Uw}%$%$
+ local-user admin service-type http
+#
+firewall zone Local
+ priority 15
+#
+interface GigabitEthernet0/0/0
+ ip address 45.45.45.2 255.255.255.0 
+#
+interface GigabitEthernet0/0/1
+ ip address 56.56.56.1 255.255.255.0 
+#
+interface GigabitEthernet0/0/2
+#
+interface NULL0
+#
+interface LoopBack0
+ ip address 5.5.5.5 255.255.255.0 
+#
+bgp 456
+ peer 4.4.4.4 as-number 456 
+ peer 4.4.4.4 connect-interface LoopBack0
+ peer 6.6.6.6 as-number 456 
+ peer 6.6.6.6 connect-interface LoopBack0
+ #
+ ipv4-family unicast
+  undo synchronization
+  peer 4.4.4.4 enable
+  peer 6.6.6.6 enable
+  peer 6.6.6.6 next-hop-local 
+#
+ospf 1 router-id 5.5.5.5 
+ area 0.0.0.1 
+  network 5.5.5.5 0.0.0.0 
+  network 45.45.45.2 0.0.0.0 
+  network 56.56.56.1 0.0.0.0 
+#
+user-interface con 0
+ authentication-mode password
+user-interface vty 0 4
+user-interface vty 16 20
+#
+wlan ac
+#
+return
