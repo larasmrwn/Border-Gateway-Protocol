@@ -2,7 +2,7 @@
 ENSP
 
 ## General Info
-Repo ini merupakan tugas dari mata kuliah Computer Network Management di semester 6. Materi yang diujikan adalah melakukan konfigurasi OSPF, RIP, dan BGP. Goals dari tugas ini adalah Router 1 dan 7 bisa menyebarkan informasi massing-masing network ke seluruh router. .
+Repo ini merupakan tugas dari mata kuliah Computer Network Management di semester 6. Materi yang diujikan adalah melakukan konfigurasi OSPF, RIP, dan BGP. Goals dari tugas ini adalah Router 1 dan 7 bisa menyebarkan informasi massing-masing network ke seluruh router.
 
 ## Topologi
 
